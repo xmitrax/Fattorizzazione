@@ -60,6 +60,11 @@ int main()
         x=-x;
         s=1;
     }
+    else if(x==0) //Ho aggiunto il caso limite dello 0.
+    {
+        printf("     0\n");
+        goto fine;
+    }
     /*ho pensato che sia inutile calcolarsi ogni volta 10^2, quindi me lo calcolo una volta per tutte
     Si assume che log(0)=-infinito in ogni compilatore*/
     for ( i = 0; i < log10(x)+1; i++)
@@ -114,5 +119,5 @@ int main()
     }
     putchar('\n');
     stampalista(candidati, s);
-    main();
+    fine:    main();
 }
